@@ -10,8 +10,7 @@ SELECT
     
 
     (
-      
-        + CASE
+        CASE
             WHEN CAST(cars.rok AS UNSIGNED) BETWEEN 1940 AND 1979 THEN 1300
             WHEN CAST(cars.rok AS UNSIGNED) BETWEEN 1980 AND 1999 THEN 2200
             WHEN CAST(cars.rok AS UNSIGNED) BETWEEN 2000 AND 2015 THEN 2500
@@ -21,7 +20,8 @@ SELECT
     
 
     (
-          CASE
+        (
+         CASE
             WHEN CAST(cars.rok AS UNSIGNED) BETWEEN 1940 AND 1979 THEN 1300
             WHEN CAST(cars.rok AS UNSIGNED) BETWEEN 1980 AND 1999 THEN 2200
             WHEN CAST(cars.rok AS UNSIGNED) BETWEEN 2000 AND 2015 THEN 2500
